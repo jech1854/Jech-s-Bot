@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const PREFIX = process.env.PREFIX
+const PREFIX = process.env.PREFIX;
 const rbx = require('roblox-js');
-const username = 'NFLRank';
-const password = 'swag1854';
+const username = process.env.USERNAME;
+const password = process.env.PASSWORD;
 const group = 3054848;
 
 rbx.login(username, password);
