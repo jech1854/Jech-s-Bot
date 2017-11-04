@@ -1,7 +1,7 @@
 const botSettings = require("./botsettings.json");
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const PREFIX = botSettings.prefix;
+const PREFIX = process.env.PREFIX
 const rbx = require('roblox-js');
 const username = 'NFLRank';
 const password = 'swag1854';
@@ -12,7 +12,7 @@ rbx.login(username, password);
 
 bot.on("ready", () =>{
 console.log("bot logged in");
-bot.user.setGame(`${botSettings.prefix}help | ${bot.guilds.size} guilds`);
+bot.user.setGame(`${PREFIX}help | ${bot.guilds.size} guilds`);
 });
 
 bot.on("message", function (message) {
